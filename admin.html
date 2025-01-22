@@ -1,0 +1,176 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Admin Unggulan</title>
+  <link rel="icon" type="image/x-icon" href="asset/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+  </style>
+
+</head>
+<body class="bg-gray-900 text-black">
+    <header class="bg-gray-800 py-4">
+     <div class="container mx-auto flex justify-between items-center px-4">
+      <div class="flex items-center space-x-4">
+       <img alt="Logo" class="logo" height="40" src="asset/Logo-01.png" width="40"/>
+       <nav class="navbartga">
+        <a href="index.html" class="text-white" href="#">Home</a>
+        <a href="admin.html" class="text-white" href="#">Admin</a>
+        <a href="community.html" class="text-white" href="#">Community</a>
+        <a href="aboutus.html" class="text-white" href="#">About Us</a>
+       </nav>
+      </div>
+     </div>
+    </header>
+  <main class="container mx-auto px-4 py-8" style="padding-top: 200px; margin-bottom: 200px;">
+  <div class="container">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2><b>Kelola list games</b></h2>
+          </div>
+          <div class="col-sm-6">
+            <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah list game</span></a>
+            <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus list</span></a>
+          </div>
+        </div>
+      </div>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th style="width: 400px;">Nama Game</th>
+            <th>Developer</th>
+            <th>Deskripsi</th>
+            <th>Link foto</th>
+            <th>Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Wuthering Waves</td>
+            <td>Kuro Games</td>
+            <td>Anjay</td>
+            <td>http</td>
+            <td>
+              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+            </td>
+          </tr> 
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Edit Modal HTML -->
+  <div id="addEmployeeModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h4 class="modal-title">Tambah list game</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Nama Game</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Developer</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Deskripsi</label>
+              <textarea class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+              <label>Link</label>
+              <input type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+            <input type="submit" class="btn btn-success" value="Add">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Edit Modal HTML -->
+  <div id="editEmployeeModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h4 class="modal-title">Edit list game</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Name game</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Developer</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Deskripsi</label>
+              <textarea class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+              <label>Link</label>
+              <input type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+            <input type="submit" class="btn btn-info" value="Save">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Delete Modal HTML -->
+  <div id="deleteEmployeeModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h4 class="modal-title">Hapus list game</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>Kamu yakin ingin menghapus list ?</p>
+            <p class="text-warning"><small>Setelah dihapus tidak bisa dikembalikan</small></p>
+          </div>
+          <div class="modal-footer">
+            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+            <input type="submit" class="btn btn-danger" value="Delete">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </main>
+  <div class="footer">
+    <img src="asset/Logo Long-02.png" alt="logo long">
+    <img src="asset/Logo Sport Academy Wide-02.png" alt="MySport.ID">
+    <img src="asset/Logo text-02.png" alt="NGNL">
+    <img src="asset/ByteSpace Logo Long-putih 03-03.png" alt="Ekik">
+    <img src="asset/Ruminity-03.png" alt="Ruminity">
+  </div>
+  </body>
